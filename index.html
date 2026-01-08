@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xtreme Wedding And Events Management | Professional Event Management</title>
+
+  <!-- BASIC SEO -->
+  <meta name="description" content="Xtreme Event Planner is a professional event management company specializing in corporate events, weddings, concerts, and private parties." />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f5f7fa; color: #333; line-height: 1.6; }
+    header { background: #0b0b0b; color: #fff; padding: 1.2rem 2rem; position: sticky; top: 0; z-index: 10; }
+    header h1 { font-size: 1.8rem; }
+    nav { margin-top: 0.5rem; }
+    nav a { color: #fff; margin-right: 1.2rem; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: #e63946; }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('background1.jpg') center/cover no-repeat;
+      color: #fff; padding: 6rem 2rem; text-align: center;
+    }
+    .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; }
+    .btn {
+      display: inline-block; margin-top: 1.5rem; padding: 0.8rem 1.4rem;
+      background: #e63946; color: #fff; border-radius: 5px; text-decoration: none; border: none; cursor: pointer;
+    }
+    .btn:hover { background: #c5303c; }
+    .container { max-width: 1200px; margin: auto; padding: 3rem 2rem; background: #fff; }
+    .section-title { text-align: center; margin-bottom: 2rem; }
+    .services, .pricing {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;
+    }
+    .card { background: #fafafa; padding: 1.8rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .card h3 { margin-bottom: 0.7rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; }
+    .gallery img { width: 100%; border-radius: 6px; }
+    .contact-form input, .contact-form textarea, .contact-form select {
+      width: 100%; padding: 0.8rem; margin-bottom: 1rem; border: 1px solid #ccc; border-radius: 4px;
+    }
+    footer { background: #0b0b0b; color: #fff; text-align: center; padding: 2rem; margin-top: 3rem; }
+    footer p { margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Xtreme Wedding And Event Planner</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#pricing">Packages</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>We Plan, You Celebrate.<br>Your Comfort, Our Priority 😉</h2>
+  <p>Premium Event Management for Every Occasion</p>
+  <a href="#contact" class="btn">Book a Consultation</a>
+</section>
+
+<section id="services" class="container">
+  <h2 class="section-title">Our Services</h2>
+  <div class="services">
+    <div class="card"><h3>Corporate Events</h3><p>Conferences, seminars, product launches, and brand activations.</p></div>
+    <div class="card"><h3>Wedding Planning</h3><p>Venue, décor, catering, entertainment, and full coordination.</p></div>
+    <div class="card"><h3>Concerts & Festivals</h3><p>Sound, lighting, stage, artist management, and crowd control.</p></div>
+    <div class="card"><h3>Private Events</h3><p>Birthdays, anniversaries, theme parties, and exclusive gatherings.</p></div>
+  </div>
+</section>
+
+<section id="gallery" class="container">
+  <h2 class="section-title">Past Events</h2>
+  <div class="gallery">
+    <img src="xtreme.png" alt="Event 1"/>
+    <img src="xtremia.jpg" alt="Event 2"/>
+    <img src="xtreme4.jpg" alt="Event 3"/>
+    <img src="xtreme3.jpg" alt="Event 4"/>
+  </div>
+</section>
+
+<section id="pricing" class="container">
+  <h2 class="section-title">Event Packages</h2>
+  <div class="pricing">
+    <div class="card"><h3>Basic</h3><p>Planning + Coordination fee</p><strong>From 30,000 INR</strong></div>
+    <div class="card"><h3>Premium</h3><p>Planning + Coordination + Hospitality</p><strong>From 60,000 INR</strong></div>
+    <div class="card"><h3>Luxury</h3><p>All-inclusive VIP Experience</p><strong>Custom Pricing</strong></div>
+  </div>
+</section>
+
+<section id="contact" class="container">
+  <h2 class="section-title">Book Your Event</h2>
+  <form id="contactForm" class="contact-form" onsubmit="submitForm(event)">
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <select id="event" required>
+      <option value="">Select Event Type</option>
+      <option value="Corporate">Corporate</option>
+      <option value="Wedding">Wedding</option>
+      <option value="Concert">Concert</option>
+      <option value="Private Party">Private Party</option>
+    </select>
+    <textarea id="details" rows="4" placeholder="Event Details" required></textarea>
+    <button class="btn" type="submit">Submit Request</button>
+  </form>
+  <p id="formMessage"></p>
+</section>
+
+<footer>
+  <p>© 2026 Xtreme Wedding And Event Management</p>
+  <p>Email: pushpendrarajput3834@gmail.com | Phone: +91 8279943232, 9528051692</p>
+</footer>
+
+<!-- EmailJS Library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<!-- EmailJS Initialization -->
+<script>
+(function () {
+  emailjs.init("B8xzn406KoOouaHPR"); // ✅ Your Public Key
+})();
+</script>
+
+<!-- Form Submission Script -->
+<script>
+function submitForm(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const eventType = document.getElementById("event").value;
+  const details = document.getElementById("details").value;
+
+  emailjs.send(
+    "service_19c1g4a",     // ✅ Service ID
+    "template_y6eziob",    // ✅ Template ID
+    { name, email, phone, event: eventType, details }
+  ).then(
+    function() {
+      document.getElementById("formMessage").innerText =
+        "Thank you! Your event request has been sent successfully.";
+      document.getElementById("contactForm").reset();
+    },
+    function(error) {
+      document.getElementById("formMessage").innerText =
+        "Error sending request. Please try again.";
+      console.error("EmailJS Error:", error);
+    }
+  );
+}
+</script>
+
+</body>
+</html>
